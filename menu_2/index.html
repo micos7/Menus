@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="" href="style.css">
+        <link rel="stylesheet" type="" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+     <nav>
+         <div>
+             Menu
+         </div>
+         <ul>
+             <li><a href="#">Home</a></li>
+             <li><a href="#">About</a></li>
+             <li><a href="#">Products <i class="fa fa-sort-desc"></i> </a>
+                <ul>
+                    <li><a href="#">Product 1 </a></li>
+                    <li><a href="#">Product 2</a></li>
+                    <li><a href="#">Product 3</a></li>
+                    <li><a href="#">Product 4</a></li>
+                    <li><a href="#">Product 5</a></li>
+                </ul>
+            </li>
+             <li><a href="#">Courses <i class="fa fa-sort-desc"></i> </a>
+                <ul>
+                    <li><a href="#">Course 1 </a></li>
+                    <li><a href="#">Course 2</a></li>
+                    <li><a href="#">Course 3</a></li>
+                    <li><a href="#">Course 4</a></li>
+                    <li><a href="#">Course 5</a></li>
+                </ul>
+             </li>
+             <li><a href="#">Gallery</a></li>
+             <li><a href="#">Contact Us</a></li>
+         </ul>
+     </nav>
+     <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script>
+      $(window).resize(function(){
+            if($(window).width() > 580){
+                $('ul').removeAttr('style')
+            };
+        });
+
+    $('nav div').click(function(){
+        
+        $('ul').slideToggle();
+        $('ul ul').css('display','none');
+    });
+
+    $('ul li').click(function(){
+        $('ul ul').slideUp();
+        $(this).find('ul').slideToggle();
+    })
+  </script>
+    </body>
+</html>
